@@ -2,6 +2,7 @@ import numbers
 import view
 import init
 from fractions import Fraction
+import logger as log
 
 def main_menu():
     print('Please select between:\n\n 1. Complex numbers\n 2. Fraction\n')
@@ -30,6 +31,7 @@ def main_menu1():
         a = complex(input('Enter 1 value:'))
         b = complex(input('Enter 2 value:'))
         init.sum(a,b)
+        log.sum_logger(data=(a,b))
         enter = input("Press Enter to continue ...") 
         main_menu1() 
     elif choice == "2": 
@@ -37,6 +39,7 @@ def main_menu1():
         a = complex(input('Enter 1 value:'))
         b = complex(input('Enter 2 value:'))
         init.diff(a,b)
+        log.diff_logger(data=(a,b))
         enter = input("Press Enter to continue ...") 
         main_menu1() 
     elif choice == "3": 
@@ -44,6 +47,7 @@ def main_menu1():
         a = complex(input('Enter 1 value:'))
         b = complex(input('Enter 2 value:'))
         init.mult(a,b)
+        log.mult_logger(data=(a,b))
         enter = input("Press Enter to continue ...") 
         main_menu1()
     elif choice == "4": 
@@ -51,6 +55,7 @@ def main_menu1():
         a = complex(input('Enter 1 value:'))
         b = complex(input('Enter 2 value:'))
         init.div(a,b)
+        log.div_logger(data=(a,b))
         enter = input("Press Enter to continue ...") 
         main_menu1() 
     elif choice == "5": 
@@ -73,6 +78,7 @@ def main_menu2():
         a = Fraction(input('Enter 1 value:'))
         b = Fraction(input('Enter 2 value:'))
         init.sum(a,b)
+        log.sum_logger(data=(a,b))
         enter = input("Press Enter to continue ...") 
         main_menu2() 
     elif choice == "2": 
@@ -80,6 +86,7 @@ def main_menu2():
         a = Fraction(input('Enter 1 value:'))
         b = Fraction(input('Enter 2 value:'))
         init.diff(a,b)
+        log.diff_logger(data=(a,b))
         enter = input("Press Enter to continue ...") 
         main_menu2() 
     elif choice == "3": 
@@ -87,6 +94,7 @@ def main_menu2():
         a = Fraction(input('Enter 1 value:'))
         b = Fraction(input('Enter 2 value:'))
         init.mult(a,b)
+        log.mult_logger(data=(a,b))
         enter = input("Press Enter to continue ...") 
         main_menu2()
     elif choice == "4": 
@@ -94,6 +102,7 @@ def main_menu2():
         a = Fraction(input('Enter 1 value:'))
         b = Fraction(input('Enter 2 value:'))
         init.div(a,b)
+        log.div_logger(data=(a,b))
         enter = input("Press Enter to continue ...") 
         main_menu2() 
     elif choice == "5": 
